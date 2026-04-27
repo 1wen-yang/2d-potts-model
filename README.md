@@ -110,13 +110,13 @@ $E(\sigma) = -J \sum_{\langle i,j \rangle} \delta(s_i, s_j)$
 
 where:
 
-- $( s_i \in \{0, 1, ..., q-1\}$
+- $s_i \in \{0, 1, ..., q-1\}$
 
 - nearest-neighbor interactions on a 2D lattice
 
 - periodic boundary conditions
 
-- \( J = 1 \)
+- $J = 1$
 
 ### Energy per spin
 
