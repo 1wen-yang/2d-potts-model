@@ -102,37 +102,153 @@ T, <E>/N, SE
 
 ---
 
-## Method
+## Model Description
 
-Energy:
+We consider the Hamiltonian:
 
-```
-E = -J * sum delta(s_i, s_j)
-```
+\[
 
-Sampling method:
+E(\sigma) = -J \sum_{\langle i,j \rangle} \delta(s_i, s_j)
 
-Metropolis algorithm:
+\]
 
-1. Propose a new state  
-2. Compute ΔE  
-3. Accept if ΔE ≤ 0 or with probability exp(-ΔE / T)
+where:
+
+- \( s_i \in \{0, 1, ..., q-1\} \)
+
+- nearest-neighbor interactions on a 2D lattice
+
+- periodic boundary conditions
+
+- \( J = 1 \)
+
+### Energy per spin
+
+\[
+
+E/N = -\frac{1}{N} \sum_{\langle i,j \rangle} \delta(s_i, s_j)
+
+\]
+
+### Theoretical limits
+
+- Low temperature: \( E/N \to -2 \)
+
+- High temperature: \( E/N \to -2/q \)
+
+### Critical temperature
+
+\[
+
+T_c(q) = \frac{1}{\ln(1 + \sqrt{q})}
+
+\]
 
 ---
 
-## Expected Behavior
+## Simulation Methods
 
-At low temperature, energy approaches -2.  
-At high temperature, energy approaches -2/q.
+### Metropolis Algorithm
 
-Critical temperature:
+- Random spin selection
 
-```
-Tc = 1 / log(1 + sqrt(q))
-```
+- Random new state (excluding current)
 
-For q = 2: continuous transition  
-For q = 10: first-order transition  
+- Accept with probability:
+
+\[
+
+P = \min(1, e^{-\Delta E / T})
+
+\]
+
+---
+
+## Simulation Design
+
+### Lattice
+
+- Square lattice: \( L \times L \)
+
+- Typical: \( L = 20 \) or \( L = 24 \)
+
+- Periodic boundary conditions
+
+### Experiments
+
+#### 1. Time Evolution
+
+- Steps: 600,000 updates
+
+- Record once per sweep
+
+- Compare:
+
+  - hot start (random)
+
+  - cold start (ordered)
+
+Temperatures:
+
+- Low: \( T = 0.5 \)
+
+- High: \( T = 20.0 \)
+
+---
+
+#### 2. Temperature Scan
+
+- q = 2: \( T \in [0.5, 1.8] \)
+
+- q = 10: \( T \in [0.45, 0.95] \)
+
+Per temperature:
+
+- 400 sweeps equilibration
+
+- 1200 sweeps measurement
+
+- record every 5 sweeps (~240 samples)
+
+---
+
+### Statistical Treatment
+
+To reduce correlation:
+
+- Thinning (every 5 sweeps)
+
+- Blocking method:
+
+  - divide samples into blocks
+
+  - compute block means
+
+  - estimate standard error
+
+---
+
+## Results
+
+### 1. Time Evolution
+
+- Cold start stays near ground state at low T
+
+- Hot start relaxes slowly
+
+- Both converge to same equilibrium
+
+### 2. Energy vs Temperature
+
+- q = 2:
+
+  - smooth transition (second-order)
+
+- q = 10:
+
+  - sharp drop near \( T_c \)
+
+  - first-order behavior (rounded by finite size)
 
 ---
 
