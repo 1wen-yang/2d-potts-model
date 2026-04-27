@@ -106,15 +106,13 @@ T, <E>/N, SE
 
 We consider the Hamiltonian:
 
-\[
-
+$$
 E(\sigma) = -J \sum_{\langle i,j \rangle} \delta(s_i, s_j)
-
-\]
+$$
 
 where:
 
-- \( s_i \in \{0, 1, ..., q-1\} \)
+- $( s_i \in \{0, 1, ..., q-1\}$
 
 - nearest-neighbor interactions on a 2D lattice
 
@@ -124,11 +122,11 @@ where:
 
 ### Energy per spin
 
-\[
+$$
 
 E/N = -\frac{1}{N} \sum_{\langle i,j \rangle} \delta(s_i, s_j)
 
-\]
+$$
 
 ### Theoretical limits
 
@@ -138,11 +136,11 @@ E/N = -\frac{1}{N} \sum_{\langle i,j \rangle} \delta(s_i, s_j)
 
 ### Critical temperature
 
-\[
+$$
 
 T_c(q) = \frac{1}{\ln(1 + \sqrt{q})}
 
-\]
+$$
 
 ---
 
@@ -156,11 +154,11 @@ T_c(q) = \frac{1}{\ln(1 + \sqrt{q})}
 
 - Accept with probability:
 
-\[
+$$
 
 P = \min(1, e^{-\Delta E / T})
 
-\]
+$$
 
 ---
 
@@ -168,9 +166,9 @@ P = \min(1, e^{-\Delta E / T})
 
 ### Lattice
 
-- Square lattice: \( L \times L \)
+- Square lattice: $L \times L$
 
-- Typical: \( L = 20 \) or \( L = 24 \)
+- Typical: $L = 20$ or $L = 24$
 
 - Periodic boundary conditions
 
@@ -190,17 +188,17 @@ P = \min(1, e^{-\Delta E / T})
 
 Temperatures:
 
-- Low: \( T = 0.5 \)
+- Low: $T = 0.5$
 
-- High: \( T = 20.0 \)
+- High: $T = 20.0$
 
 ---
 
 #### 2. Temperature Scan
 
-- q = 2: \( T \in [0.5, 1.8] \)
+- q = 2: $T \in [0.5, 1.8]$
 
-- q = 10: \( T \in [0.45, 0.95] \)
+- q = 10: $T \in [0.45, 0.95]$
 
 Per temperature:
 
@@ -246,7 +244,7 @@ To reduce correlation:
 
 - q = 10:
 
-  - sharp drop near \( T_c \)
+  - sharp drop near $T_c$
 
   - first-order behavior (rounded by finite size)
 
