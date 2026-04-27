@@ -106,9 +106,7 @@ T, <E>/N, SE
 
 We consider the Hamiltonian:
 
-$$
-E(\sigma) = -J \sum_{\langle i,j \rangle} \delta(s_i, s_j)
-$$
+$E(\sigma) = -J \sum_{\langle i,j \rangle} \delta(s_i, s_j)$
 
 where:
 
@@ -122,25 +120,17 @@ where:
 
 ### Energy per spin
 
-$$
-
-E/N = -\frac{1}{N} \sum_{\langle i,j \rangle} \delta(s_i, s_j)
-
-$$
+$E/N = -\frac{1}{N} \sum_{\langle i,j \rangle} \delta(s_i, s_j)$
 
 ### Theoretical limits
 
-- Low temperature: \( E/N \to -2 \)
+- Low temperature: $E/N \to -2$
 
-- High temperature: \( E/N \to -2/q \)
+- High temperature: $E/N \to -2/q$
 
 ### Critical temperature
 
-$$
-
-T_c(q) = \frac{1}{\ln(1 + \sqrt{q})}
-
-$$
+$T_c(q) = \frac{1}{\ln(1 + \sqrt{q})}$
 
 ---
 
@@ -154,11 +144,7 @@ $$
 
 - Accept with probability:
 
-$$
-
-P = \min(1, e^{-\Delta E / T})
-
-$$
+$P = \min(1, e^{-\Delta E / T})$
 
 ---
 
